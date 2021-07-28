@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Gready";
+    src: url(./fonts/Gready_Thin.otf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(./fonts/Roboto-Light.ttf);
+}
+body{
+    font-family: "Roboto";
+    background-color: cadetblue;
+}
+h1{
+    font-family: "Gready";
+    font-size: 70px;
+}
+.lastBill{
+    font-size: 30px;
+    text-align: center;
+}
+h1, h3
+{
+    text-align:center;
+}
+h3
+{
+    background-color:rgba(60, 98, 99, 1);
+    border-radius: 8px 8px 0px 0px;
+    padding:10px;
+    color:rgb(224, 224, 224);
+    font-size:1.6em;
+    margin-bottom:0px;
+}
+.date-parution{
+    font-size: 14px;
+}
+.news p
+{
+    background-color:#dfdfdf;
+    border-radius: 0px 0px 8px 8px;
+    padding: 20px;
+    margin-top:0px;
+    font-size: 20px;
+}
+.news
+{
+    width:600px;
+    margin:auto;
+}
+
+a
+{
+    display: flex;
+    margin-top: 10px;
+    text-decoration: none;
+    color: blue;
+}
