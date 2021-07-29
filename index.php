@@ -1,3 +1,7 @@
+<?php 
+require('connexionBDD.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,32 +12,25 @@
     <title>Document</title>
 </head>
 <body>
+    <?php include("menu.php") ?>
     <h1>Blog</h1>
     <p class="lastBill">Derniers billets</p>
-
-
+    
 <?php 
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=blogPHP;charset=utf8', 'root', 'root');
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
+
 $req = $bdd->query("SELECT id, titre, contenu, date_creation, DATE_FORMAT(date_creation, '%e %b %Y à %H:%i') AS date_creation_fr FROM billets ORDER BY date_creation DESC LIMIT 0, 5");
 while($donnees = $req->fetch())
 {
 ?>
-<div class="news">
+<div class="textDesc">
     <h3>
         <?php echo htmlspecialchars($donnees['titre']); ?><br/>
         <span class="date-parution"><em>Le <?php echo $donnees['date_creation_fr']; ?></em></span>
     </h3>
-    <p class="contenu-billet">
+    <p class="contenu-text">
         <?php echo nl2br(htmlspecialchars($donnees['contenu'])); ?>
         </br>
-        <em><a href="commentaires.php?billet=<?php echo $donnees['id']; ?>">Commentaires</a></em>
+        <em><a href="commentaires.php?billet=<?php echo $donnees['id']; ?>&titre=<?php echo $donnees['titre']; ?>">Commentaires</a></em>
     </p>
 </div>
 <?php

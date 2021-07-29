@@ -1,27 +1,39 @@
-@font-face {
+@font-face
+{
     font-family: "Gready";
     src: url(./fonts/Gready_Thin.otf);
 }
-@font-face {
+
+@font-face
+{
     font-family: "Roboto";
     src: url(./fonts/Roboto-Light.ttf);
 }
-body{
+
+body
+{
     font-family: "Roboto";
     background-color: cadetblue;
+    overflow-y : scroll;
 }
-h1{
+
+h1
+{
     font-family: "Gready";
     font-size: 70px;
 }
-.lastBill{
+
+.lastBill
+{
     font-size: 30px;
     text-align: center;
 }
+
 h1, h3
 {
     text-align:center;
 }
+
 h3
 {
     background-color:rgba(60, 98, 99, 1);
@@ -31,10 +43,13 @@ h3
     font-size:1.6em;
     margin-bottom:0px;
 }
-.date-parution{
+
+.date-parution
+{
     font-size: 14px;
 }
-.news p
+
+.textDesc p,form
 {
     background-color:#dfdfdf;
     border-radius: 0px 0px 8px 8px;
@@ -42,7 +57,8 @@ h3
     margin-top:0px;
     font-size: 20px;
 }
-.news
+
+.textDesc
 {
     width:600px;
     margin:auto;
@@ -54,4 +70,38 @@ a
     margin-top: 10px;
     text-decoration: none;
     color: blue;
+}
+
+ul
+{
+    text-align: center;
+    padding-left: 20px;
+}
+
+li
+{
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+li a
+{
+    color:cornsilk;
+}
+
+hr.hr-class
+{
+    border: 5px solid rgba(60, 98, 99, 1);
+    border-radius: 10px;
+}
+
+input, textarea,button
+{
+    font-size: 18px;
+}
+
+.nonvisible{
+    visibility: hidden;
 }
