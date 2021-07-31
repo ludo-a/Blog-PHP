@@ -1,5 +1,5 @@
 <?php 
-require('connexionBDD.php');
+require('./src/connexionBDD.php');
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ require('connexionBDD.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/style.css">
     <title>Blog</title>
 </head>
 <body>
@@ -19,7 +19,7 @@ require('connexionBDD.php');
     
 <?php 
 //Verification en cas de modification de l'url
-$req = $bdd->prepare("SELECT id_billet FROM commentaires WHERE id_billet = ?");
+$req = $bdd->prepare("SELECT id FROM billets WHERE id = ?");
 $req->execute(array($_GET['billet']));
 $condition = $req->fetch();
 if($condition == false){
@@ -31,7 +31,7 @@ if($condition == false){
     </h3>
     <p class="contenu-text">
         Il semblerait que le contenu n'existe pas.</br>
-        Vous êtes prié(e) de ne pas modifier l'URL, Merci.
+        Vous êtes prié(e) de ne pas tenter de modifier l'URL, Merci.
     </p>
 </div>
 
@@ -65,7 +65,7 @@ $req2->closeCursor();
 <!-- Formulaire d'ajout de commentaire -->
 <div class="textDesc">
     <h3>Ajouter un commentaire</h3>
-    <form method="post" action="commentaire_post.php">
+    <form method="post" action="./src/commentaire_post.php">
         <label>Nom ou Pseudo</label></br>
         <input type="text" name="auteur"></br>
         <input class="nonvisible" type="text" name="id_billet" value="<?php echo $_GET['billet'] ?>" readonly></br>

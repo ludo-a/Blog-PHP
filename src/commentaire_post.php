@@ -16,7 +16,7 @@ if(isset($_POST["auteur"]) && isset($_POST["commentaire"]) && isset($_POST["id_b
     $req = $bdd->prepare('INSERT INTO commentaires(id_billet, auteur, commentaire, date_commentaire) VALUES (:id_billet, :auteur, :comm, NOW())');
     $req->execute($data);
 
-    header('Location: ./commentaires.php?billet='.$id_billet.'&titre='.$titre);
+    header('Location: ../commentaires.php?billet='.$id_billet.'&titre='.$titre);
 }
 
 ?>

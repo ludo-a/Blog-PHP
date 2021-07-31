@@ -1,13 +1,13 @@
 @font-face
 {
     font-family: "Gready";
-    src: url(./fonts/Gready_Thin.otf);
+    src: url(../fonts/Gready_Thin.otf);
 }
 
 @font-face
 {
     font-family: "Roboto";
-    src: url(./fonts/Roboto-Light.ttf);
+    src: url(../fonts/Roboto-Light.ttf);
 }
 
 body
@@ -60,7 +60,7 @@ h3
 
 .textDesc
 {
-    width:600px;
+    width:70%;
     margin:auto;
 }
 
