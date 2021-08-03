@@ -42,7 +42,7 @@ else{ // sinon affichage de la BDD
     $req2->execute(array($_GET['billet']));
 ?>
 
-<p class="lastBill">Les Commentaires de : <?php //echo $_GET['titre']; ?></p>
+<p class="lastBill">Les Commentaires de : <?php echo $_GET['titre']; ?></p>
 
 <?php while($donnees = $req2->fetch())
 {
